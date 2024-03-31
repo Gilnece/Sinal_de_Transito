@@ -1,0 +1,51 @@
+#define Bot1 2 // botão do pedestre
+#define Led1 4 // pedestre
+#define Led2 5 // verde
+#define Led3 6 // amarelo
+#define Led4 7 // vermelho
+
+volatile bool pedestreAtivo = false; // Variável para verificar se o botão do pedestre foi pressionado
+
+void acionaLed1() {
+  pedestreAtivo = true; // Define o status do pedestre como ativo
+}
+
+void setup() {
+  pinMode(Bot1, INPUT_PULLUP);
+  pinMode(Led1, OUTPUT);
+  pinMode(Led2, OUTPUT);
+  pinMode(Led3, OUTPUT);
+  pinMode(Led4, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(Bot1), acionaLed1, FALLING);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (pedestreAtivo) {
+    digitalWrite(Led1, HIGH); // Aciona o Led1 para o pedestre
+    digitalWrite(Led2, LOW); // Desliga o Led2 (verde)
+    digitalWrite(Led4, LOW); // Desliga o Led4 (vermelho)
+    digitalWrite(Led3, HIGH); // Aciona o Led3 (amarelo)
+    delay(3000); // Aguarda 3 segundos com o LED amarelo aceso
+    digitalWrite(Led3, LOW); // Desliga o Led3 (amarelo)
+    digitalWrite(Led4, HIGH); // Aciona o Led4 (vermelho)
+    delay(6000); // Aguarda 6 segundos com o LED vermelho aceso
+    pedestreAtivo = false; // Reseta o status do pedestre
+  }
+  
+  // Semaforo automático
+  digitalWrite(Led1, LOW); // Desliga o Led1 (pedestre)
+  digitalWrite(Led2, HIGH); // Aciona o Led2 (verde)
+  digitalWrite(Led4, LOW); // Desliga o Led4 (vermelho)
+  delay(3000); // Aguarda 3 segundos
+  digitalWrite(Led2, LOW); // Desliga o Led2 (verde)
+  digitalWrite(Led3, HIGH); // Aciona o Led3 (amarelo)
+  delay(3000); // Aguarda 3 segundos
+  digitalWrite(Led3, LOW); // Desliga o Led3 (amarelo)
+  digitalWrite(Led4, HIGH); // Aciona o Led4 (vermelho)
+  delay(3000); // Aguarda 3 segundos
+  
+  // Resto do código aqui
+  Serial.println("Programa dentro do LOOP!");
+  Serial.println("Tempo: " + String(millis()));
+}
