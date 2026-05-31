@@ -135,3 +135,7 @@ semaforo_pedestre.ino
 * Linguagem C/C++
 * Arduino IDE
 * Tinkercad
+
+
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/bb869edf-7e7e-4b50-bf65-30bdd68788f9" />
