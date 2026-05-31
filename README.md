@@ -42,7 +42,7 @@ Resistor 10 kΩ------    	1
 Protoboard----------	    1
 
 
-##🔌 Ligações
+## 🔌 Ligações
 - LEDs
   
 - LED	Pino Arduino
