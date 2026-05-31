@@ -88,9 +88,13 @@ Travessia de Pedestres
 Quando o botão é pressionado:
 
 1 - O LED azul do pedestre é ativado.
+
 2 - O LED verde é desligado.
+
 3 - O LED amarelo permanece ligado por 3 segundos (transição).
+
 4 - O LED vermelho é ligado por 6 segundos.
+
 5 - O sistema retorna ao funcionamento normal.
 
 ## 🧠 Conceitos Aplicados
