@@ -128,34 +128,7 @@ semaforo_pedestre.ino
 5 - Teste o funcionamento.
 
 # 📊 Fluxograma Simplificado
-INÍCIO
-   │
-   ▼
-Semáforo Verde
-   │
-   ▼
-Semáforo Amarelo
-   │
-   ▼
-Semáforo Vermelho
-   │
-   ▼
-Botão pressionado?
- ┌───┴────┐
- │        │
-Não      Sim
- │        │
- ▼        ▼ 
-Repete  Aciona
- Ciclo  Pedestre
-           │
-           ▼
-      Vermelho 6s
-           │
-           ▼
-      Retorna ao
-      ciclo normal
-
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/1569da01-de8d-4d92-a4ac-f2cf8071f3cb" />
 
 # 📚 Tecnologias Utilizadas
 * Arduino Uno R3
