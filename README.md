@@ -22,22 +22,37 @@ O acionamento do botão é tratado através de interrupção externa, garantindo
 
 ## 🛠 Componentes Utilizados
 Componente----------	Quantidade
+
 Arduino Uno R3------	    1
+
 LED Vermelho--------	    1
+
 LED Amarelo---------	    1
+
 LED Verde-----------	    1
+
 LED Azul (Pedestre)-	    1
+
 Resistor 220 Ω------	    4
+
 Botão Push Button---	    2
+
 Resistor 10 kΩ------    	1
+
 Protoboard----------	    1
+
 
 ##🔌 Ligações
 - LEDs
+  
 - LED	Pino Arduino
+  
 - Azul (Pedestre)	D4
+  
 - Verde	D5
+  
 - Amarelo	D6
+  
 - Vermelho	D7
 
 Todos os LEDs utilizam resistores de 220 Ω em série.
@@ -91,7 +106,7 @@ A variável é declarada como volatile para garantir que seu valor seja atualiza
 }"
 Sempre que o botão é pressionado, a variável é alterada para informar ao programa principal que existe uma solicitação de travessia.
 
-##📄 Código Fonte
+### 📄 Código Fonte
 
 O código completo encontra-se no arquivo:
 "semaforo_pedestre.ino"
@@ -104,6 +119,7 @@ semaforo_pedestre.ino
 3 - Clique em Start Simulation.
 4 - Observe o ciclo do semáforo.
 5 - Pressione o botão de pedestre para solicitar a travessia.
+
 # Arduino IDE
 1 - Abra o arquivo .ino.
 2 - Conecte o Arduino Uno.
@@ -112,44 +128,33 @@ semaforo_pedestre.ino
 5 - Teste o funcionamento.
 
 # 📊 Fluxograma Simplificado
-
 INÍCIO
    │
    ▼
-   
 Semáforo Verde
    │
    ▼
-   
 Semáforo Amarelo
    │
    ▼
-   
 Semáforo Vermelho
    │
    ▼
-   
 Botão pressionado?
-
  ┌───┴────┐
  │        │
- 
 Não      Sim
  │        │
- ▼        ▼
- 
+ ▼        ▼ 
 Repete  Aciona
  Ciclo  Pedestre
            │
            ▼
-           
       Vermelho 6s
            │
            ▼
-           
       Retorna ao
       ciclo normal
-
 
 
 # 📚 Tecnologias Utilizadas
