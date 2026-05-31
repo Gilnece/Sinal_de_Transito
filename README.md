@@ -22,31 +22,29 @@ O acionamento do botão é tratado através de interrupção externa, garantindo
 
 ## 🛠 Componentes Utilizados
 Componente----------	Quantidade
-Arduino Uno R3------	1
-LED Vermelho--------	1
-LED Amarelo---------	1
-LED Verde-----------	1
-LED Azul (Pedestre)-	1
-Resistor 220 Ω------	4
-Botão Push Button---	2
-Resistor 10 kΩ------	1
-Protoboard----------	1
+Arduino Uno R3------	    1
+LED Vermelho--------	    1
+LED Amarelo---------	    1
+LED Verde-----------	    1
+LED Azul (Pedestre)-	    1
+Resistor 220 Ω------	    4
+Botão Push Button---	    2
+Resistor 10 kΩ------    	1
+Protoboard----------	    1
 
 ##🔌 Ligações
-LEDs
-LED	Pino Arduino
-Azul (Pedestre)	D4
-Verde	D5
-Amarelo	D6
-Vermelho	D7
+- LEDs
+- LED	Pino Arduino
+- Azul (Pedestre)	D4
+- Verde	D5
+- Amarelo	D6
+- Vermelho	D7
 
 Todos os LEDs utilizam resistores de 220 Ω em série.
 
 Botão de Pedestre
 Componente	Pino
 Botão	D2
-
-
 
 
 O botão utiliza a configuração:
@@ -114,34 +112,43 @@ semaforo_pedestre.ino
 5 - Teste o funcionamento.
 
 # 📊 Fluxograma Simplificado
+
 INÍCIO
    │
    ▼
+   
 Semáforo Verde
    │
    ▼
+   
 Semáforo Amarelo
    │
    ▼
+   
 Semáforo Vermelho
    │
    ▼
+   
 Botão pressionado?
+
  ┌───┴────┐
  │        │
+ 
 Não      Sim
  │        │
  ▼        ▼
+ 
 Repete  Aciona
  Ciclo  Pedestre
            │
            ▼
+           
       Vermelho 6s
            │
            ▼
+           
       Retorna ao
       ciclo normal
-
 
 
 
